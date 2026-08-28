@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turner Construction | Jackson, Ohio</title>
+<meta name="description" content="Turner Construction — residential remodeling, flooring, garage improvements, painting, decks and railings in Jackson, Ohio. Request an estimate today.">
+<style>
+:root{
+  --navy:#101820; --gold:#d6a84f; --cream:#f5f2ea; --white:#fff;
+  --gray:#66707a; --line:#e4e1d9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--navy);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:absolute;top:0;left:0;right:0;z-index:10;color:white}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.2rem;font-weight:800;letter-spacing:.08em}
+.logo span{color:var(--gold)}
+nav a{margin-left:28px;font-size:.92rem;font-weight:600}
+.hero{
+ min-height:720px;display:flex;align-items:center;color:white;
+ background:linear-gradient(90deg,rgba(8,15,20,.9),rgba(8,15,20,.55),rgba(8,15,20,.25)),
+ linear-gradient(135deg,#202a31,#59636a);
+ position:relative;overflow:hidden
+}
+.hero:after{content:"";position:absolute;inset:0;background:
+ repeating-linear-gradient(135deg,transparent 0 85px,rgba(255,255,255,.035) 86px 87px);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:720px;padding-top:60px}
+.kicker{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}
+h1{font-size:clamp(3rem,7vw,5.6rem);line-height:.98;margin:18px 0 24px;letter-spacing:-.04em}
+.hero p{font-size:1.18rem;max-width:620px;color:#eef1f3}
+.btn{display:inline-block;padding:15px 23px;border-radius:4px;font-weight:800;margin:12px 10px 0 0}
+.btn-primary{background:var(--gold);color:#101820}
+.btn-outline{border:1px solid rgba(255,255,255,.55);color:#fff}
+section{padding:90px 0}
+.section-kicker{color:#a27a2d;font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.75rem}
+h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:12px 0 18px}
+.lead{color:var(--gray);max-width:680px;font-size:1.05rem}
+.about{background:var(--cream)}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.stat{background:#fff;border:1px solid var(--line);padding:20px}
+.stat strong{display:block;font-size:1.8rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{border:1px solid var(--line);padding:28px;background:#fff}
+.card .num{color:var(--gold);font-weight:900;font-size:.8rem}
+.card h3{font-size:1.25rem;margin:12px 0 8px}
+.card p{color:var(--gray);margin:0}
+.project{background:var(--navy);color:white}
+.project-box{border:1px solid rgba(255,255,255,.15);padding:45px;display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.project-box p{color:#c8ced3}
+.checks{list-style:none;padding:0;margin:20px 0}
+.checks li{margin:10px 0}
+.checks li:before{content:"✓";color:var(--gold);font-weight:900;margin-right:10px}
+.contact{background:var(--cream)}
+.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact-card{background:white;padding:34px;border:1px solid var(--line)}
+.contact-row{padding:14px 0;border-bottom:1px solid var(--line)}
+.contact-row:last-child{border-bottom:0}
+.contact-row small{display:block;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+footer{background:#080e13;color:#b8c0c6;padding:30px 0;font-size:.9rem}
+footer .container{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+ nav{display:none}.hero{min-height:650px}.grid,.project-box,.contact-box{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr}.stats{grid-template-columns:1fr}
+ section{padding:65px 0}footer .container{display:block}
+}
+
+.gallery{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:220px 220px;gap:14px;margin-top:40px}
+.gallery .photo{position:relative;overflow:hidden;background:linear-gradient(135deg,#37434b,#9b9b96);min-height:160px}
+.gallery .photo:nth-child(2){background:linear-gradient(135deg,#252c31,#b59d79)}
+.gallery .photo:nth-child(3){background:linear-gradient(135deg,#6c706e,#d9d4c8)}
+.gallery .photo:nth-child(4){background:linear-gradient(135deg,#8a7762,#2b3135)}
+.gallery .photo:nth-child(5){background:linear-gradient(135deg,#303b40,#aa8f70)}
+.gallery .photo:nth-child(6){background:linear-gradient(135deg,#7c817e,#e0ddd5)}
+.gallery .photo:first-child{grid-row:span 2}
+.gallery .photo:before{content:"PROJECT PHOTO";position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.78);font-weight:900;letter-spacing:.15em;font-size:.7rem}
+.form{background:#fff;padding:34px;border:1px solid var(--line)}
+.form input,.form textarea,.form select{width:100%;padding:13px;margin:7px 0 13px;border:1px solid #d6d4ce;border-radius:3px;font:inherit}
+.form textarea{min-height:110px;resize:vertical}
+.form button{border:0;cursor:pointer;width:100%;font:inherit}
+.demo-note{font-size:.78rem;color:#8a6a2a;background:#fbf5e7;border:1px solid #ead9b0;padding:10px 12px;margin-top:20px}
+@media(max-width:800px){.gallery{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,180px)}.gallery .photo:first-child{grid-row:span 1}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">TURNER <span>CONSTRUCTION</span></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="kicker">Jackson, Ohio</div>
+    <h1>Built right.<br>Built for you.</h1>
+    <p>Local residential construction and home improvement with a focus on professional results, careful workmanship, and dependable project completion.</p>
+    <a class="btn btn-primary" href="tel:+17409352003">Call for an Estimate</a>
+    <a class="btn btn-outline" href="#services">View Services</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container grid">
+    <div>
+      <div class="section-kicker">Local craftsmanship</div>
+      <h2>Quality work for the place you call home.</h2>
+      <p class="lead">Turner Construction is a Jackson, Ohio contractor serving homeowners with residential improvement and construction work. Public business listings describe the company as a general contractor with experience across remodeling, flooring, garage improvements, painting, decks and railings.</p>
+      <div class="stats">
+        <div class="stat"><strong>5.0★</strong><span>Public rating shown in current local listing</span></div>
+        <div class="stat"><strong>Local</strong><span>Based in Jackson, Ohio</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="card" style="background:#101820;color:white;border:0;padding:40px">
+        <div class="num">WHY TURNER</div>
+        <h3 style="font-size:2rem">Care. Craft. Completion.</h3>
+        <p style="color:#c8ced3">Customer feedback highlights professional-looking results, respectful service, attention to projects, and reasonable completion timelines.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-kicker">What we do</div>
+    <h2>Residential services</h2>
+    <p class="lead">A straightforward approach to the projects that improve how your home looks, works, and feels.</p>
+    <div class="cards">
+      <div class="card"><div class="num">01</div><h3>Remodeling</h3><p>Interior remodeling and general home improvement projects tailored to your space.</p></div>
+      <div class="card"><div class="num">02</div><h3>Flooring</h3><p>Floor replacement and new flooring projects with attention to the finished result.</p></div>
+      <div class="card"><div class="num">03</div><h3>Garage Improvements</h3><p>Garage improvement and expansion projects for additional space and function.</p></div>
+      <div class="card"><div class="num">04</div><h3>Painting</h3><p>Interior and exterior painting work to refresh and improve your property.</p></div>
+      <div class="card"><div class="num">05</div><h3>Decks & Railings</h3><p>Deck and railing projects designed around your home's needs and appearance.</p></div>
+      <div class="card"><div class="num">06</div><h3>Home Improvements</h3><p>Practical construction and improvement work for homeowners in the Jackson area.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
+    <div class="section-kicker">Recent work</div>
+    <h2>Built with attention to the details.</h2>
+    <p class="lead">A dedicated project gallery gives homeowners a quick way to see the type of work Turner Construction can provide.</p>
+    <div class="gallery">
+      <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+      <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+    </div>
+    <div class="demo-note">Demo note: replace these placeholders with Turner Construction's actual project photos before publishing.</div>
+  </div>
+</section>
+<section class="project">
+  <div class="container project-box">
+    <div>
+      <div class="section-kicker">Your next project</div>
+      <h2>Let's talk about what you're building.</h2>
+      <p>Whether you're updating a room, replacing flooring, improving your garage, or adding a deck, start with a conversation about your project.</p>
+      <a class="btn btn-primary" href="tel:+17409352003">740-935-2003</a>
+    </div>
+    <div>
+      <ul class="checks">
+        <li>Professional-looking finished work</li>
+        <li>Respectful, careful service</li>
+        <li>Residential improvement experience</li>
+        <li>Jackson-area local contractor</li>
+        <li>Request an estimate by phone</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="contact">
+  <div class="container contact-box">
+    <div>
+      <div class="section-kicker">Request an estimate</div>
+      <h2>Tell us about your project.</h2>
+      <p class="lead">Give Turner Construction a few details and we'll be in touch to discuss the work and next steps.</p>
+      <div class="contact-card" style="margin-top:24px">
+        <div class="contact-row"><small>Phone</small><a href="tel:+17409352003"><strong>740-935-2003</strong></a></div>
+        <div class="contact-row"><small>Location</small><strong>Jackson, Ohio</strong></div>
+      </div>
+    </div>
+    <form class="form" onsubmit="event.preventDefault(); alert('Demo form — connect this to the contractor\\'s email or CRM before launch.');">
+      <label>Name</label><input required placeholder="Your name">
+      <label>Phone</label><input required type="tel" placeholder="(740) 555-5555">
+      <label>Project type</label>
+      <select><option>Remodeling</option><option>Flooring</option><option>Garage</option><option>Painting</option><option>Deck / Railing</option><option>Other</option></select>
+      <label>Tell us about the project</label><textarea placeholder="What are you looking to have done?"></textarea>
+      <button class="btn btn-primary" type="submit">Request an Estimate</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div>© 2026 Turner Construction · Jackson, Ohio</div>
+    <div>Residential Construction & Home Improvement · Website demo</div>
+  </div>
+</footer>
+</body>
+</html>
